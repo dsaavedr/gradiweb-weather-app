@@ -33,15 +33,15 @@ export default function Banner() {
 
         return (
             <div className='banner'>
-                <FloatingInfo imgURL={iconURL} />
                 <div className='info'>
                     <div className='name'>
                         <IoLocationSharp />
-                        <p>{data.name}</p>
+                        <div>{data.name}</div>
                     </div>
+                    {/* <FloatingInfo imgURL={iconURL} />
                     <p>Temperature: {data.main.temp} &deg;C</p>
                     <p>Feels like: {data.main.feels_like} &deg;C</p>
-                    <p>Description: {data.weather[0].description}</p>
+                    <p>Description: {data.weather[0].description}</p> */}
                 </div>
             </div>
         );
