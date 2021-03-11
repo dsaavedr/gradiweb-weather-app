@@ -28,9 +28,9 @@ export default function Banner() {
         };
     }, []);
 
-    const iconURL = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
-
     if (data) {
+        const iconURL = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+
         return (
             <div className='banner'>
                 <FloatingInfo imgURL={iconURL} />
