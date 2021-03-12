@@ -8,17 +8,20 @@ body
 *
     box-sizing: border-box
 
-.App
+.App, .container
     min-height: 100vh
     width: 100vw
-    max-width: $maxWidthContainer
-    margin: 0 auto
     overflow: auto
-    background: $off-white
+    // background: $off-white
+
+.container
+    margin: 0 auto
+    max-width: $maxWidthContainer
+    overflow: visible
 
 .text-primary
     color: $primary-color
 
 h2
-    font-weight: normal
-    margin: 0
+    font-weight: lighter
+    margin: 0 0 30px
