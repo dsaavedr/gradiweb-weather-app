@@ -17,7 +17,9 @@ export default function FloatingInfo(props) {
                 <p className='desc'>{weather[0].main}</p>
             </div>
             <div className='bottom'>
-                <span>{main.temp}&deg;C</span>
+                <span>
+                    {main.temp}&deg;<sup>c</sup>
+                </span>
             </div>
         </div>
     );
