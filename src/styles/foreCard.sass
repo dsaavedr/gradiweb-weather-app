@@ -1,0 +1,21 @@
+.foreCard
+    border: 1px solid lighten($light-gray, 20)
+    border-radius: calc(#{$mainRadius}/2)
+    display: flex
+    justify-content: space-between
+    margin-top: 20px
+    box-shadow: 5px 10px 40px rgba(black, 0.2)
+
+    .temp
+        border-radius: calc(#{$mainRadius}/2)
+        transform: scale(1.05)
+        background: $secondary-color
+        text-align: center
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0 20px
+
+        &.main
+            background: $primary-color
+            color: white
