@@ -1,10 +1,16 @@
 import "./styles/index.sass";
 import Banner from "./components/Banner";
+import Sections from "./components/Sections";
 
 function App() {
     return (
         <div className='App'>
-            <Banner />
+            <header>
+                <Banner />
+            </header>
+            <main>
+                <Sections />
+            </main>
         </div>
     );
 }
