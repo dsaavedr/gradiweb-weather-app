@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { IoLocationSharp } from "react-icons/io5";
 
 import Loading from "./Loading";
