@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function FloatingInfo(props) {
+    const [collapsed, setCollapsed] = useState(false);
+
+    const { weather, main } = props.info;
+    const iconURL = `http://openweathermap.org/img/wn/${weather[0].icon}@4x.png`;
+
+    const collapse = () => {
+        setCollapsed(!collapsed);
+    };
+
     return (
-        <div className='floatingInfo'>
+        <div className={"floatingInfo " + (collapsed ? "collapsed" : "")} onClick={collapse}>
             <div className='top'>
-                <img src={props.imgURL} alt='Weather icon' />
+                <img src={iconURL} alt='Weather icon' />
+                <p className='desc'>{weather[0].main}</p>
+            </div>
+            <div className='bottom'>
+                <span>{main.temp}&deg;C</span>
             </div>
         </div>
     );

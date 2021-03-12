@@ -19,29 +19,32 @@ export default function Banner() {
         Http.send();
 
         Http.onreadystatechange = e => {
-            if (Http.readyState === 4 && Http.status === 200) {
+            const { readyState, status } = Http;
+
+            if (readyState === 4 && status === 200) {
                 // Simulate server wait time to show loader
                 setTimeout(() => {
                     setData(JSON.parse(Http.responseText));
+                    console.log(data);
                 }, 1500);
             }
         };
     }, []);
 
     if (data) {
-        const iconURL = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+        let info = {
+            weather: data.weather,
+            main: data.main
+        };
 
         return (
             <div className='banner'>
                 <div className='info'>
-                    <div className='name'>
+                    <div className='name text-primary'>
                         <IoLocationSharp />
                         <div>{data.name}</div>
                     </div>
-                    {/* <FloatingInfo imgURL={iconURL} />
-                    <p>Temperature: {data.main.temp} &deg;C</p>
-                    <p>Feels like: {data.main.feels_like} &deg;C</p>
-                    <p>Description: {data.weather[0].description}</p> */}
+                    <FloatingInfo info={info} />
                 </div>
             </div>
         );
