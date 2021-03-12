@@ -38,14 +38,14 @@ export default function Banner() {
         };
 
         return (
-            <div className='banner'>
-                <div className='info'>
+            <div>
+                <div className='banner'>
                     <div className='name text-primary'>
-                        <IoLocationSharp />
+                        <IoLocationSharp className='icon' />
                         <div>{data.name}</div>
                     </div>
-                    <FloatingInfo info={info} />
                 </div>
+                <FloatingInfo info={info} />
             </div>
         );
     }
