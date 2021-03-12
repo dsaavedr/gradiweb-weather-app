@@ -19,7 +19,7 @@ export default function Forecast(props) {
         return (
             <ForeCard
                 key={idx}
-                main={idx == 0}
+                main={idx === 0}
                 day={weekday[date.getDay()]}
                 img={iconURL}
                 desc={main}
