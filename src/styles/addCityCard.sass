@@ -1,0 +1,27 @@
+.addCity
+    height: 200px
+    margin-top: 40px
+    border: 1px dashed $light-gray
+    border-radius: calc(#{$mainRadius} / 2)
+    background: url(../images/city.png)
+    background-size: 100%
+    background-position: bottom
+    background-repeat: no-repeat
+
+    button
+        background: none
+        border: none
+        display: block
+        margin: 40px auto
+        padding: 10px 40px
+        border-radius: 1000px
+        background: $secondary-color
+        color: $primary-color
+        font-weight: bold
+
+        &:hover
+            cursor: pointer
+
+        &:active, &:focus
+            border: none
+            outline: none

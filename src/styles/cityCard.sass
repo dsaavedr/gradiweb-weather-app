@@ -3,15 +3,41 @@
     box-shadow: 5px 10px 40px rgba(black, 0.2)
     margin-bottom: 20px
     position: relative
-    padding: 20px
+    background: white
+    z-index: 5
+    overflow: hidden
+    font-size: 14px
 
     .main, .bottom
         display: flex
 
     .main
+
+        h4
+            margin: 0
+
+        .icon, .temp, .info
+            display: flex
+            align-items: center
+            justify-content: center
+
+        .icon
+            border-radius: calc(#{$mainRadius} / 2)
+            background: $secondary-color
+            padding: 10px
+
         img
-            width: 60px
+            width: 80px
+
+        .temp
+            font-size: 40px
+            margin: 0 20px
+            min-width: 50px
+
+            sup
+                font-size: 12px
 
     .bottom
+        padding: 20px
         color: lighten($light-gray, 0.2)
         justify-content: space-between
