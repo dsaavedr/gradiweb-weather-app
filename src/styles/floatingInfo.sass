@@ -1,0 +1,48 @@
+.floatingInfo
+    color: white
+    width: 120px
+    position: absolute
+    top: 4em
+    left: 0
+    transition: $quickTransition
+
+    &.collapsed
+        margin-left: -90px
+
+    &:hover
+        cursor: pointer
+
+    .top, .bottom
+        border-top-right-radius: $mainRadius
+        border-bottom-right-radius: $mainRadius
+        height: 100px
+        width: 100px
+        position: relative
+
+    .top
+        background: $primary-dark
+        font-size: 10px
+        text-align: center
+        z-index: 4
+        transition: $quickTransition
+
+        &:hover
+            width: 120px
+
+        p
+            margin: -25px 0 0
+            font-weight: normal
+
+        img
+            width: 100px
+
+    .bottom
+        background: $primary-color
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: -40px
+        height: 120px
+
+        span
+            margin: 30px 0 0
