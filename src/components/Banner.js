@@ -12,7 +12,7 @@ export default function Banner() {
         const Http = new XMLHttpRequest();
         // Bogotá's id
         const city = "3688689";
-        const key = "47f3d15d03f33af83023cb5f186ff4f0";
+        const key = process.env.REACT_APP_OWM_KEY;
         const url = `https://api.openweathermap.org/data/2.5/weather?id=${city}&appid=${key}&units=metric`;
 
         Http.open("GET", url);
