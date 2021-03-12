@@ -18,7 +18,7 @@ export default function FloatingInfo(props) {
             </div>
             <div className='bottom'>
                 <span>
-                    {main.temp}&deg;<sup>c</sup>
+                    {Math.round(main.temp)}&deg;<sup>c</sup>
                 </span>
             </div>
         </div>
