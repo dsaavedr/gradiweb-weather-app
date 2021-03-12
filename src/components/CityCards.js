@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import AddCityCard from "./AddCityCard";
 
 import CityCard from "./CityCard";
 
@@ -10,6 +11,8 @@ export default class CityCards extends Component {
             cards: [],
             cities: ["Paris", "Lyon"]
         };
+
+        this.getByCityName.bind(this);
     }
 
     componentDidMount() {
@@ -41,6 +44,11 @@ export default class CityCards extends Component {
     };
 
     render() {
-        return <div className='cards'>{this.state.cards}</div>;
+        return (
+            <div className='cards'>
+                {this.state.cards}
+                <AddCityCard func={this.getByCityName} />
+            </div>
+        );
     }
 }

@@ -26,7 +26,10 @@ export default function CityCard(props) {
                     <img src={iconURL} alt='' />
                 </div>
                 <div className='temp'>
-                    <span>{Math.round(main.temp)} &deg;C</span>
+                    <span>
+                        <strong>{Math.round(main.temp)}</strong>
+                        <sup>&deg;C</sup>
+                    </span>
                 </div>
                 <div className='info'>
                     <h4 className='city'>
